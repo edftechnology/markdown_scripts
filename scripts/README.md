@@ -36,6 +36,14 @@ Resumo genérico do projeto. Explique o problema, o objetivo e o valor da soluç
 _Generic abstract in English. Summarize the purpose, scope, and outputs in 2-4 lines._
 
 
+## Descrição
+
+`smartmontools`
+
+`smartctl`
+
+`smartd`
+
 <!-- COMEÇANDO -->
 ### Começando
 

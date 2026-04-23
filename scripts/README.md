@@ -1,338 +1,231 @@
-<!-- LOGOTIPO DO PROJETO -->
-<div style="display: flex; justify-content: center;">
-   <a href="https://github.com/SEU-USUARIO/SEU-PROJETO">
-     <img src="docs/figures/logo.png" alt="Logo" width="200" height="100">
-   </a>
-</div>
-
-<h3 align="center">NomeDoProjeto</h3>
-
-<div style="display: flex; justify-content: center;">
-  <a href="https://doi.org/SEU-DOI">
-    <img src="https://zenodo.org/badge/SEU_BADGE.svg" alt="DOI">
-  </a>
-</div>
-
-<p align="center">
- Uma descrição curta e genérica do projeto. Substitua por um resumo real quando usar este template.
- <br />
- <a href="https://github.com/SEU-USUARIO/SEU-PROJETO"><strong>Explore os documentos »</strong></a>
- <br />
- <br />
- <a href="https://github.com/SEU-USUARIO/SEU-PROJETO">Ver demonstração</a>
- ·
- <a href="https://github.com/SEU-USUARIO/SEU-PROJETO">Relatar bug</a>
- ·
- <a href="https://github.com/SEU-USUARIO/SEU-PROJETO">Solicitar recurso</a>
-</p>
-
+# Como instalar/configurar/usar o `bmon` no `Linux Ubuntu`
 
 ## Resumo
 
-Resumo genérico do projeto. Explique o problema, o objetivo e o valor da solução em 2-4 linhas.
+Guia direto para instalar o `bmon` no `Linux Ubuntu` pelo `Terminal Emulator`, com um caminho principal via `apt` e um caminho alternativo por compilação do código-fonte.
 
 ## _Abstract_
 
-_Generic abstract in English. Summarize the purpose, scope, and outputs in 2-4 lines._
+_A straightforward guide to install `bmon` on `Linux Ubuntu` through the `Terminal Emulator`, with a primary `apt`-based path and an optional source-build path._
 
 
 ## Descrição
 
-`smartmontools`
+### `bmon`
 
-`smartctl`
-
-`smartd`
-
-<!-- COMEÇANDO -->
-### Começando
-
-Este template mostra como documentar a configuração local do projeto. Substitua pelos passos reais.
-
-### Pré-requisitos
-
-Lista genérica de ferramentas necessárias. Ajuste versões e remova o que não se aplica.
-
-* [![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-
-* [![Anaconda](https://img.shields.io/badge/Anaconda-4.x-44A833?style=flat-square&logo=anaconda&logoColor=white)](https://www.anaconda.com/)
-
-* [![Git](https://img.shields.io/badge/Git-2.x-F05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/)
-
-* [![VS Code](https://img.shields.io/badge/VS%20Code-1.x-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) ou qualquer IDE compatível
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+O `bmon` é uma ferramenta de linha de comando para monitorar largura de banda e estatísticas de rede em tempo real. Ele oferece interface interativa baseada em `ncurses` e também modos de saída em texto, úteis para depuração, observabilidade e automação.
 
 
-## Guia de instalação
+## Pré-requisitos
 
-### Instalar o Git
+- Permissão para usar `sudo`
+- Repositórios `ubuntu` habilitados, preferencialmente incluindo `universe`
+- Conexão com a internet para instalar pacotes
+- `apt` funcional no sistema
 
-Explique como instalar o Git ou remova esta seção se não for necessária.
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+## 1. Abrir o `Terminal Emulator`
 
-## Guia de instalação
-
-### Instalar o Git
-
-Reforço do conteúdo ou seção extra. Mantenha ou remova conforme o uso do template.
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-#### `Windows` [2]
-
-Explique como configurar SSH no Windows (ou ajuste para o provedor desejado).
-
-1. Verifique se o Git está instalado.
-2. Abra o Git Bash.
-3. Gere uma chave SSH (`ssh-keygen -t rsa -C "seu_email@exemplo.com"`).
-4. Adicione a chave no provedor (GitHub/GitLab/Bitbucket).
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-### Atualizar pacotes `pip` e `setuptools` [3]
-
-Exemplo genérico de atualização de pacotes:
-
-1. `pip install --upgrade pip`
-2. `pip install --upgrade setuptools`
-3. `pip install --upgrade wheel`
-
-### Clonar o repositório do Git e instalar dependências
-
-#### `Linux`
-
-1. **Clone o repositório:**
-
-  - **Pelo terminal:** `git clone git@github.com:SEU-USUARIO/SEU-PROJETO.git`
-
-  - **(Ou)** baixar o `.zip` na página do GitHub
-
-  <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-#### `Windows`
-
-1. **Clone o repositório:**
-
-  - **Pelo terminal:** `git clone git@github.com:SEU-USUARIO/SEU-PROJETO.git`
-
-  - (Ou) baixar o `.zip` na página do GitHub
-
-  <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-## Como executar a aplicação
-
-### Executar a partir do `Terminal Emulator`
-
-1. Exemplo genérico de execução:
+1. Abrir o `Terminal Emulator`. Você pode fazer isso pressionando:
 
 ```bash
-python3 main.py --input caminho/para/arquivo --output caminho/para/saida
-```
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-
-### Executar a partir da `Graphical User Interface (GUI)`
-
-1. Exemplo genérico de execução:
-
-```bash
-python3 scripts/app_gui.py
-```
-
-## Mostrar ajuda
-
-1. Exemplo genérico de ajuda:
-
-```bash
-python3 main.py --help
-```
-
-### Exemplo de Saída Esperada
-
-Exemplo genérico (substitua pelo help real do projeto):
-
-```bash
-usage: main.py [-h] --input INPUT [--output OUTPUT]
+Ctrl + Alt + T
 ```
 
 
-## What the app does
+2. Certifique-se de que seu sistema esteja limpo e atualizado.
 
-Describe in English, at a high level, what the application does and the main outputs.
+    2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando:
+        
+    ```bash
+    sudo apt clean
+    ```
 
-- Example capability 1
-- Example capability 2
-- Example capability 3
+    2.2 Remover pacotes `.deb` antigos ou duplicados do `cache` local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando:
 
+    ```bash
+    sudo apt autoclean
+    ```
 
-## What the app shows as output(s)
+    2.3 Remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários. Digite o seguinte comando:
 
-# Relatório de Análise de Dados
+    ```bash
+    sudo apt autoremove -y
+    ```
 
-## 1. Introdução
+    2.4 Buscar as atualizações disponíveis para os pacotes que estão instalados em seu sistema. Digite o seguinte comando e pressione `Enter`:
 
-- Objetivo da análise: descrição genérica.
-- Descrição do conjunto de dados analisado: origem, tamanho, formato.
-- Metodologia utilizada para a análise.
+    ```bash
+    sudo apt update
+    ```
 
-## 2. Estatísticas Gerais do Conjunto de Dados
+    2.5 **Corrigir pacotes quebrados**: Isso atualizará a lista de pacotes disponíveis e tentará corrigir pacotes quebrados ou com dependências ausentes:
 
-- Número total de variáveis.
-- Número total de registros.
-- Tipos de dados por variável.
-- Resumo da ocupação de memória.
+    ```bash
+    sudo apt --fix-broken install
+    ```
 
-## 3. Qualidade dos Dados
+    2.6 Limpar o `cache` do gerenciador de pacotes `apt` novamente:
 
-- Valores faltantes: contagem e percentual.
-- Valores únicos por variável.
-- Distribuição de valores nulos ou infinitos.
-- Detecção de espaços em branco no início/fim.
+    ```bash
+    sudo apt clean
+    ```
 
-## 4. Estatísticas Descritivas das Variáveis Numéricas
+    2.7 Para ver a lista de pacotes a serem atualizados, digite o seguinte comando e pressione `Enter`:
 
-- Contagem de valores válidos.
-- Média, mediana, moda.
-- Desvio padrão e variância.
-- Valor mínimo e máximo.
-- Quartis.
+    ```bash
+    sudo apt list --upgradable
+    ```
 
-## 5. Análise de Outliers
+    2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`:
 
-- Critério de outliers (ex.: 1.5x IQR).
-- Variáveis com maior presença de outliers.
-
-## 6. Correlações Entre Variáveis
-
-- Matriz de correlação.
-- Variáveis altamente correlacionadas.
-
-## 7. Estatísticas de Variáveis Categóricas
-
-- Contagem de ocorrências por categoria.
-- Percentual de distribuição por categoria.
-
-## 8. Análise de Tendências Temporais (se aplicável)
-
-- Distribuição temporal dos dados.
-- Identificação de padrões sazonais.
-
-## 9. Conclusões e Próximos Passos
-
-- Resumo dos principais insights.
-- Sugestões de melhorias/transformações.
-- Próximos passos.
+    ```bash
+    sudo apt full-upgrade -y
+    ```
 
 
-## Gráficos Essenciais no Relatório
+## 3. Instalar o `bmon` via `apt`
 
-- Histogramas
-- Boxplots
-- Heatmap de correlação
-- Gráfico de dispersão
-- Gráficos de barras
-- Linha do tempo (se aplicável)
+Na maioria dos casos, a forma mais simples e portátil de instalar o `bmon` no `Ubuntu` é usar o pacote disponível nos repositórios da distribuição.
 
+1. Garantir que o repositório `universe` esteja habilitado:
 
-# Correlsp
+    ```bash
+    sudo add-apt-repository universe
+    sudo apt update
+    ```
 
-## 1. Função da Aplicação
+2. Instalar o `bmon`:
 
-Descrição genérica da função principal do módulo.
+    ```bash
+    sudo apt install -y bmon
+    ```
 
-### 1.1 Entrada(s)
+3. Confirmar que o binário foi instalado corretamente:
 
-1. Formatos de arquivo suportados (ex.: `.csv`, `.xlsx`).
-
-### 1.2 Saída(s)
-
-1. Descrição das saídas esperadas.
-
-## 2. Observação(ões)
-
-1. Observações gerais e boas práticas.
-2. Restrições conhecidas.
-
-# 3. Futura(s) Melhoria(s)
-
-- Lista de melhorias planejadas.
-
-## 5. Cálculo(s)
-
-### 5.1 Coeficiente de Correlação de Karl Pearson
-
-Descrição genérica e referência a fórmulas/documentos relevantes.
-
-#### 5.1.1 Descrição
-
-Texto genérico sobre a interpretação.
-
-### 5.2 $p$-value Para Mensurar Validade de Coeficientes de Correlação
-
-Resumo genérico de hipóteses e interpretação.
-
-### 5.3 Coeficiente de Correlação de Charles Spearman
-
-Descrição genérica e referência a fórmulas/documentos relevantes.
-
-### 5.4 Coeficiente de Correlação de Maurice Kendall Para Dados Ordinais
-
-Descrição genérica e referência a fórmulas/documentos relevantes.
-
-### 5.5 Coeficiente de Correlação de Maurice Kendall Para Dados Ponderados
-
-Descrição genérica e referência a fórmulas/documentos relevantes.
+    ```bash
+    bmon --help
+    ```
 
 
-<!-- LICENÇA -->
+## 4. Executar o `bmon`
+
+1. Depois da instalação, você pode iniciar o monitoramento com o comando:
+
+    ```bash
+    bmon
+    ```
+
+2. Se quiser monitorar uma _interface_ específica, como `eth0`, use:
+
+    ```bash
+    bmon -p eth0
+    ```
+
+3. Para listar opções disponíveis e modos de saída:
+
+    ```bash
+    bmon --help
+    ```
+
+
+## 5. (Opcional) Instalar o `bmon` compilando o código-fonte
+
+Esse caminho é útil quando você precisa seguir as instruções do projeto upstream ou quer compilar manualmente a ferramenta.
+
+1. Instalar as dependências de compilação:
+
+    ```bash
+    sudo apt install -y \
+        git \
+        build-essential \
+        make \
+        pkg-config \
+        dh-autoreconf \
+        libconfuse-dev \
+        libnl-3-dev \
+        libnl-route-3-dev \
+        libncurses-dev
+    ```
+
+2. Clonar o repositório oficial:
+
+    ```bash
+    git clone https://github.com/tgraf/bmon.git
+    cd bmon
+    ```
+
+3. Gerar os arquivos de configuração, compilar e instalar:
+
+    ```bash
+    ./autogen.sh
+    ./configure
+    make
+    sudo make install
+    ```
+
+4. Testar a instalação:
+
+    ```bash
+    bmon
+    ```
+
+
+## 2. Como ver o `bmon` mostrando sua velocidade real
+
+1. Abra dois terminais.
+
+    - **`Terminal 1`**:
+
+    ```bash
+    bmon -p wlp2s0
+    ```
+
+    ou
+
+    ```bash
+    bmon -p enp0s31f6
+    ```
+
+    - **`Terminal 2`**: Baixe algo grande:
+
+    ```bash
+    wget http://speedtest.tele2.net/100MB.zip
+    ```
+
+    ou
+
+    ```bash
+    curl -O http://speedtest.tele2.net/100MB.zip
+    ```
+
+    Agora o `bmon` vai mostrar algo como:
+
+    ```bash
+    RX: 20 MB/s
+    ```
+
+## Compatibilidade
+
+- O pacote `bmon` está disponível nos repositórios do `Ubuntu`, inclusive em ambientes baseados em `Jammy`.
+- O método via `apt` é o mais indicado para instalações comuns no `Linux Ubuntu`.
+- A compilação manual é uma alternativa quando você precisa seguir o _upstream_ ou validar dependências de desenvolvimento.
+
+
 ## Licença
 
-Distribuído sob a licença `MIT`. Consulte `LICENSE.txt` para obter mais informações.
+Este repositório inclui o arquivo `LICENSE.txt`.
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+## Contato e suporte
 
-<!-- ROTEIRO -->
-## Roteiro
-
-- [ ] Adicionar registro de alterações
-- [ ] Adicionar links de volta ao topo
-- [ ] Adicionar modelos adicionais com exemplos
-- [ ] Suporte multilíngue
-
-Consulte os problemas abertos para obter uma lista completa dos recursos propostos.
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-
-<!-- CONTRIBUIÇÔES -->
-## Contribuições
-
-Explique como contribuir (fork, branch, PR, issues).
-
-1. Bifurque o projeto
-2. Crie sua ramificação (`git checkout -b feature/NovaFuncionalidade`)
-3. Confirme suas alterações (`git commit -m 'Describe change'`)
-4. Envie para a filial (`git push origin feature/NovaFuncionalidade`)
-5. Abra uma solicitação `pull`
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Agradecimentos
-
-* Referência 1
-* Referência 2
-* Referência 3
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+Para dúvidas ou problemas, consulte o repositório oficial do `bmon` e a documentação da sua versão do `Linux Ubuntu`.
 
 
 ## Referências
 
-[1] Fonte ou documentação relevante.
-[2] Artigo, tutorial ou manual adicional.
-[3] Outro link útil.
+[1] OPENAI. ***Instalar o `bmon` no `linux ubuntu` pelo `terminal emulator`***. Disponível em: <https://chatgpt.com/c/69b700b3-b03c-8326-84e4-309f7e577240>. ChatGPT. Acessado em: 15/03/2026.
+
+[2] TGRAF. ***bmon - Bandwidth Monitor***. Disponível em: <https://github.com/tgraf/bmon>. Acessado em: 15/03/2026.
+
+[3] UBUNTU DEVELOPERS. ***Package: bmon***. Disponível no metadado do pacote `apt` do `Ubuntu` e na página do pacote mantida pelo projeto `Linux Ubuntu`. Acessado em: 15/03/2026.
+

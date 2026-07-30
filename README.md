@@ -83,23 +83,23 @@ Para configurar/instalar/usar o `markdown_scripts`, siga os passos abaixo:
 
 2. Acessar a pasta do seu projeto:
 
-```bash
-cd <caminho_ate_o_projeto>
-```
+    ```bash
+    cd <caminho_ate_o_projeto>
+    ```
 
 3. Adicionar o `markdown_scripts` como submodule:
 
-```bash
-git submodule add \
-    git@github.com:edftechnology/markdown_scripts.git \
-    subs/submodules/markdown_scripts
-```
+    ```bash
+    git submodule add \
+        git@github.com:edftechnology/markdown_scripts.git \
+        subs/submodules/markdown_scripts
+    ```
 
 4. Inicializar submodules existentes (se aplicável):
 
-```bash
-git submodule update --init --recursive
-```
+    ```bash
+    git submodule update --init --recursive
+    ```
 
 
 ## 2. (Opcional) Atualizar o `markdown_scripts`
@@ -109,9 +109,9 @@ Os comandos interativos do ecossistema agora podem verificar se o submodule
 
 Quando houver uma vers\u00e3o mais nova e a sess\u00e3o for interativa (`TTY`), o usu\u00e1rio ver\u00e1 um prompt neste formato:
 
-```bash
-[markdown_scripts] A newer version is available. Would you like to update now? [y/N]
-```
+    ```bash
+    [markdown_scripts] A newer version is available. Would you like to update now? [y/N]
+    ```
 
 Pol\u00edtica adotada:
 
@@ -122,29 +122,31 @@ Pol\u00edtica adotada:
 - Executar atualiza\u00e7\u00e3o com `fast-forward only` se o usu\u00e1rio responder `y`
 - Reiniciar o pr\u00f3prio comando ap\u00f3s a atualiza\u00e7\u00e3o para executar j\u00e1 com a vers\u00e3o nova
 
-O fluxo de atualiza\u00e7\u00e3o executa:
+1. O fluxo de atualiza\u00e7\u00e3o executa:
 
-```bash
-git -C subs/submodules/markdown_scripts fetch origin
-git -C subs/submodules/markdown_scripts pull --ff-only
-```
+    ```bash
+    git -C subs/submodules/markdown_scripts fetch origin
+    git -C subs/submodules/markdown_scripts pull --ff-only
+    ```
 
 Sem `TTY`, o comportamento fica s\u00f3 no aviso e a execu\u00e7\u00e3o segue sem atualizar.
 
 ## 3. Observação
 
-Este bloco é um template. Ajuste URLs, paths e comandos conforme o padrão do seu projeto.
+Este bloco é um _template_. Ajuste URLs, paths e comandos conforme o padrão do seu projeto.
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 
-### Exemplo rápido para adicionar o template em outro projeto
+### Exemplo rápido para adicionar o _template_ em outro projeto
 
-```bash
-git submodule add \
-    git@github.com:edftechnology/markdown_scripts.git \
-    subs/submodules/markdown_scripts
-```
+1. Para adicionar o _template_ em outro projeto, execute: 
+
+    ```bash
+    git submodule add \
+        git@github.com:edftechnology/markdown_scripts.git \
+        subs/submodules/markdown_scripts
+    ```
 
 
 ## Como executar a aplicação
@@ -153,9 +155,9 @@ git submodule add \
 
 1. Exemplo genérico de execução:
 
-```bash
-python3 main.py --input caminho/para/arquivo --output caminho/para/saida
-```
+    ```bash
+    python3 main.py --input caminho/para/arquivo --output caminho/para/saida
+    ```
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
@@ -166,25 +168,21 @@ python3 main.py --input caminho/para/arquivo --output caminho/para/saida
 
 1. Exemplo genérico de execução:
 
-```bash
-python3 scripts/app_gui.py
-```
-
-
+    ```bash
+    python3 scripts/app_gui.py
+    ```
 
 ## Mostrar ajuda
 
 1. Exemplo genérico de ajuda:
 
-```bash
-python3 main.py --help
-```
-
-
+    ```bash
+    python3 main.py --help
+    ```
 
 ### Exemplo de Saída Esperada
 
-Exemplo genérico (substitua pelo help real do projeto):
+1. Exemplo genérico (substitua pelo help real do projeto):
 
 ```bash
 usage: main.py [-h] --input INPUT [--output OUTPUT]
